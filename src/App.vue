@@ -18,6 +18,10 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+.body {
+    background: #1C5EAC;
+}
+
 #app {
   font-family: Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
