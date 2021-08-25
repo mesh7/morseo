@@ -2,6 +2,7 @@
   <div class="home-component">
     <h1>-- --- .-. ... .</h1>
     <h2>You might have heard about the morse code, but do you know it</h2>
+    <h2>Learn morse code with Morseo.</h2>
     <button class="button" @click="hello()">
       <div class="button-text">Get Started</div>
     </button>
