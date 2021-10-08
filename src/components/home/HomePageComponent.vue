@@ -1,14 +1,17 @@
 <template>
   <div class="home-component">
+    <span class="image"></span>
+    <img class="logo" alt="morseo-logo" src="logo.svg"/>
+    <p class="title">Morseo</p>
     <h1>-- --- .-. ... .</h1>
     <h2>You might have heard about the morse code, but do you know it</h2>
     <h2>Learn morse code with Morseo.</h2>
-    <button class="button" @click="hello()">
-      <div class="button-text">Get Started</div>
+    <button class="get-started-button" @click="hello()">
+      <div class="get-started-button-text">Get Started</div>
     </button>
-
     <input class="input" />
     <div id="output"></div>
+    <span class="dot_two"> </span>
   </div>
 </template>
 
@@ -43,8 +46,6 @@ export default {
           " seconds</p>";
         pressed[event.which] = 0;
       };
-
-
     },
 
     validation() {},

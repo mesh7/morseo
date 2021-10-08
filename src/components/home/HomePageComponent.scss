@@ -10,7 +10,27 @@
     }
 }
 
-.button {
+.title {
+    font-size: 80px;
+}
+
+.image {
+    background-image: url(logo.svg);
+}
+
+.dot_one {
+    height: 50vw;
+    width: 50vw;
+    border-radius: 50%;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.get-started-button {
     background-color: #04aa6d; /* Green */
     border: none;
     color: aqua;
