@@ -1,17 +1,36 @@
 <template>
   <div class="home-component">
-    <span class="image"></span>
-    <img class="logo" alt="morseo-logo" src="logo.svg"/>
-    <p class="title">Morseo</p>
-    <h1>-- --- .-. ... .</h1>
-    <h2>You might have heard about the morse code, but do you know it</h2>
-    <h2>Learn morse code with Morseo.</h2>
-    <button class="get-started-button" @click="hello()">
-      <div class="get-started-button-text">Get Started</div>
-    </button>
-    <input class="input" />
-    <div id="output"></div>
-    <span class="dot_two"> </span>
+    <!-- <div class="dots">
+      <span class="dot__one"> </span>
+      <span class="dot__two"> </span>
+      <span class="dot__three"> </span>
+    </div> -->
+
+    <div class="hero-content">
+      <img class="logo" alt="morseo-logo" src="./logo.svg" />
+      <div class="main-title">
+        <p class="main-title__one">
+          You might have heard about the morse code, but do you know it
+        </p>
+        <p class="main-title__one">Learn morse code with Morseo.</p>
+      </div>
+
+      <button class="get-started-button" @click="getStarted()">
+        <div class="get-started-button__text">Get Started</div>
+      </button>
+    </div>
+
+    <!-- <input class="input" />
+    <div id="output"></div> -->
+    <span class="dot_four"> </span>
+    <div class="footer">
+      <div class="footer__item" @click="redirect('contact')">
+        <u>Contact</u>
+      </div>
+      <div class="footer__item" @click="redirect('support')">
+        <u>Support</u>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -22,7 +41,8 @@ export default {
   name: "HomePageComponent",
   methods: {
     created() {},
-    hello() {
+
+    getStarted() {
       console.log("hello");
 
       var output = document.getElementById("output"),
@@ -48,8 +68,15 @@ export default {
       };
     },
 
+    //rediting the footer links
+    redirect(navigateTo) {
+      if (navigateTo === "contact") {
+        window.location.href = "https://twitter.com/shubhammesh7";
+      } else if (navigateTo === "support") {
+        window.location.href = "https://github.com/mesh7";
+      }
+    },
     validation() {},
-
     audio() {
       var spaceKeyAudio = new Audio("");
       spaceKeyAudio.play();

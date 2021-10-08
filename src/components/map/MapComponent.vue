@@ -1,7 +1,6 @@
 <template>
   <div class="map-component">
-    <h1>-- --- .-. ... .</h1>
-    <h2>You might have heard about the morse code, but do you know it</h2>
+    <h4>Map component</h4>
   </div>
 </template>
 

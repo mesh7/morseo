@@ -1,45 +1,101 @@
-.home-component {
-    h1 {
-        font-size: 52px;
-        color: white;
+.dot {
+    &__one {
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(3.5px);
+        -webkit-backdrop-filter: blur(3.5px);
     }
 
-    h2 {
-        font-size: 48px;
-        color: white;
+    &__two {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(3.5px);
+        -webkit-backdrop-filter: blur(3.5px);
+    }
+
+    &__three {
+        height: 400px;
+        width: 400px;
+        border-radius: 50%;
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(3.5px);
+        -webkit-backdrop-filter: blur(3.5px);
+    }
+
+    &__four {
+        height: 30em;
+        width: 30em;
+        border-radius: 50%;
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(3.5px);
+        -webkit-backdrop-filter: blur(3.5px);
     }
 }
 
-.title {
-    font-size: 80px;
+.logo {
+    height: 120px;
 }
 
-.image {
-    background-image: url(logo.svg);
-}
+.main-title {
+    margin-top: 20px;
+    margin-bottom: 60px;
 
-.dot_one {
-    height: 50vw;
-    width: 50vw;
-    border-radius: 50%;
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(3.5px);
-    -webkit-backdrop-filter: blur(3.5px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    &__one {
+        margin: 4px 0;
+        font-size: 20px;
+        color: white;
+    }
 }
 
 .get-started-button {
-    background-color: #04aa6d; /* Green */
+    height: 60px;
+    width: 200px;
     border: none;
-    color: aqua;
-    padding: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    text-decoration: none;
+    background: #659bdc;
+    border-radius: 32px;
     cursor: pointer;
-    border-radius: 12px;
+
+    &__text {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 20px;
+        color: white;
+    }
+}
+
+.get-started-button:hover {
+    background: blanchedalmond;
+}
+
+
+
+.footer {
+    display: flex;
+
+    &__item {
+        margin: 16px;
+        font-size: 16px;
+        color: white;
+    }
+
+    :hover {
+        cursor: pointer;
+        color: black;
+    }
 }

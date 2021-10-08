@@ -20,6 +20,7 @@ export default {
 
 .body {
     background: #1C5EAC;
+    margin: 0;
 }
 
 #app {
@@ -28,6 +29,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px 0;
+  padding: 24px;
 }
 </style>
