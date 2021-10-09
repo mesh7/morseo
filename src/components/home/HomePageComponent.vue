@@ -6,7 +6,7 @@
       <span class="dot__three"> </span>
     </div> -->
 
-    <div class="hero-content">
+    <div class="content">
       <img class="logo" alt="morseo-logo" src="./logo.svg" />
       <div class="main-title">
         <p class="main-title__one">

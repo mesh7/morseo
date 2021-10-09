@@ -44,8 +44,18 @@
     }
 }
 
+.content {
+    margin-top: 100px;
+}
+
 .logo {
     height: 120px;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 60px;
+    }
 }
 
 .main-title {
@@ -83,10 +93,10 @@
     background: blanchedalmond;
 }
 
-
-
 .footer {
     display: flex;
+    justify-content: center;
+    margin-top: 360px;
 
     &__item {
         margin: 16px;
