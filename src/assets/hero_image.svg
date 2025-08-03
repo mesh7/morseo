@@ -1,0 +1,20 @@
+<svg width="690" height="690" viewBox="0 0 690 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="75" cy="75" r="75" fill="#E3E0FD"/>
+<circle cx="255" cy="75" r="75" fill="#878FFE"/>
+<circle cx="435" cy="75" r="75" fill="#878FFE"/>
+<circle cx="615" cy="75" r="75" fill="#E3E0FD"/>
+<circle cx="75" cy="255" r="75" fill="#878FFE"/>
+<circle cx="255" cy="255" r="75" fill="#E3E0FD"/>
+<circle cx="435" cy="255" r="75" fill="#E3E0FD"/>
+<circle cx="615" cy="255" r="75" fill="#E3E0FD"/>
+<circle cx="75" cy="435" r="75" fill="#E3E0FD"/>
+<circle cx="255" cy="435" r="75" fill="#878FFE"/>
+<circle cx="435" cy="435" r="75" fill="#E3E0FD"/>
+<circle cx="615" cy="435" r="75" fill="#E3E0FD"/>
+<circle cx="75" cy="615" r="75" fill="#E3E0FD"/>
+<circle cx="255" cy="615" r="75" fill="#E3E0FD"/>
+<circle cx="435" cy="615" r="75" fill="#E3E0FD"/>
+<circle cx="615" cy="615" r="75" fill="#878FFE"/>
+<path d="M615 180C656.421 180 690 213.579 690 255C690 296.098 656.944 329.475 615.97 329.994L615 330H435C393.579 330 360 296.421 360 255C360 213.579 393.579 180 435 180H615Z" fill="#878FFE"/>
+<path d="M435 540C476.421 540 510 573.579 510 615C510 656.098 476.944 689.475 435.97 689.994L435 690H255C213.579 690 180 656.421 180 615C180 573.579 213.579 540 255 540H435Z" fill="#878FFE"/>
+</svg>

@@ -35,17 +35,22 @@ const toggleDarkMode = () => {
   >
     <!-- Content -->
     <div class="md:w-1/2 text-center md:text-left">
-      <h1 class="text-4xl font-extrabold mb-4">
-        Learn Morse Code - The Timeless Language of Signals
+      <h1
+        class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-indigo-400 md:text-5xl lg:text-6xl dark:text-white"
+      >
+        Learn Morse Code
       </h1>
-      <p class="text-lg text-gray-600 mb-6">
-        Welcome to Morseo, your interactive companion for mastering Morse code —
+      <h6 class="mb-4 text-2xl font-extrabold text-gray-500 dark:text-white">
+        The Timeless Language of Signals
+      </h6>
+      <p class="mt-6 text-lg text-gray-900 dark:text-white">
+        Welcome to Morseo, your interactive companion for mastering Morse code -
         the timeless language of signals and sound. Whether you're a curious
         beginner, a history buff, or a survivalist prepping for off-grid
         communication, we've got you covered.
       </p>
       <div class="space-x-4">
-        <div class="buttons mt-2">
+        <div class="buttons mt-8">
           <Button
             class="mr-6"
             id="start-button"
@@ -60,6 +65,7 @@ const toggleDarkMode = () => {
             class=""
             id="tutorial-button"
             severity="secondary"
+            variant="outlined"
             rounded
             size="large"
             @click="navigateToTutorial"
@@ -70,11 +76,11 @@ const toggleDarkMode = () => {
     </div>
 
     <!-- Hero Image -->
-    <div class="md:w-1/2 mb-10 md:ml-4 md:mb-0">
+    <div class="card md:w-1/2 mb-10 md:ml-4 md:mb-0">
       <img
-        src="../../assets/hero_1.PNG"
+        src="../../assets/hero_image.SVG"
         alt="Morseo Hero Image"
-        class="card p-8 w-full h-auto"
+        class="p-8 w-full h-auto"
       />
     </div>
   </section>
