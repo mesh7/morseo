@@ -21,7 +21,14 @@ const toggleDarkMode = () => {
 <template>
   <!-- Navigation Header -->
   <header class="flex justify-between items-center px-8 py-6">
-    <h1 class="text-2xl font-bold">Morseo</h1>
+    <div class="flex">
+      <img
+        src="../../assets/morseo_logo.SVG"
+        alt="Morseo Logo"
+        class="mr-2 w-6 h-6"
+      />
+      <h1 class="text-2xl font-bold">Morseo</h1>
+    </div>
     <nav class="space-x-4">
       <a href="#" class="text-gray-600 hover:text-blue-600">Morse Chart</a>
       <a href="#" class="text-gray-600 hover:text-blue-600">Contact</a>
@@ -53,23 +60,31 @@ const toggleDarkMode = () => {
         <div class="buttons mt-8">
           <Button
             class="mr-6"
+            style="
+              background-color: var(--color-indigo-400);
+              border: 2px solid var(--color-indigo-400);
+            "
             id="start-button"
             severity="primary"
             rounded
             size="large"
             @click="navigateToCodePage"
-            ><p class="font-semibold">Start Challenge</p>
+            ><p class="mx-2 font-semibold text-white">Start Challenge</p>
           </Button>
 
           <Button
             class=""
+            style="
+              background-color: var(--color-indigo-50);
+              border: 2px solid var(--color-indigo-50);
+            "
             id="tutorial-button"
             severity="secondary"
             variant="outlined"
             rounded
             size="large"
             @click="navigateToTutorial"
-            ><p class="font-semibold">Tutorial</p>
+            ><p class="mx-2 font-semibold">Tutorial</p>
           </Button>
         </div>
       </div>
