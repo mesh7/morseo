@@ -13,5 +13,11 @@ const navigateToCodePage = () => {
 <template>
   <h2>Code Page</h2>
   <!-- <WordCard msg="Vite + Vue" /> -->
-  <Button @click="navigateToCodePage">Go to Home Page</Button>
+  <Button
+    label="Secondary"
+    severity="secondary"
+    rounded
+    @click="navigateToCodePage"
+    >Go to Home Page</Button
+  >
 </template>

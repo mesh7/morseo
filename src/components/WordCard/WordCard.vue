@@ -6,7 +6,7 @@ defineProps<{ msg: string }>();
 </script>
 
 <template>
-  <Button label="Secondary" severity="secondary" />
+  <Button label="Secondary" severity="secondary" rounded/>
 </template>
 
 <style scoped></style>
