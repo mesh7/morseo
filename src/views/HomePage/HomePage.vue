@@ -16,11 +16,15 @@ const navigateToTutorial = () => {
 const toggleDarkMode = () => {
   document.documentElement.classList.toggle("dark");
 };
+
+const navigateToGithub = () => {
+  window.location.href = "https://github.com/mesh7";
+};
 </script>
 
 <template>
   <!-- Navigation Header -->
-  <header class="flex justify-between items-center px-8 py-6">
+  <header class="flex justify-between items-center px-8 py-4">
     <div class="flex">
       <img
         src="../../assets/morseo_logo.SVG"
@@ -57,7 +61,7 @@ const toggleDarkMode = () => {
         communication, we've got you covered.
       </p>
       <div class="space-x-4">
-        <div class="buttons mt-8">
+        <div class="buttons mt-10">
           <Button
             class="mr-6"
             style="
@@ -69,7 +73,7 @@ const toggleDarkMode = () => {
             rounded
             size="large"
             @click="navigateToCodePage"
-            ><p class="mx-2 font-semibold text-white">Start Challenge</p>
+            ><p class="mx-3 font-semibold text-white">Let's start</p>
           </Button>
 
           <Button
@@ -84,7 +88,7 @@ const toggleDarkMode = () => {
             rounded
             size="large"
             @click="navigateToTutorial"
-            ><p class="mx-2 font-semibold">Tutorial</p>
+            ><p class="mx-3 font-semibold">Tutorial</p>
           </Button>
         </div>
       </div>
@@ -98,6 +102,22 @@ const toggleDarkMode = () => {
         class="p-8 w-full h-auto"
       />
     </div>
+  </section>
+  <section>
+    <footer class="flex flex-col mt-auto pt-4">
+      <P class="text-center">Made with ❤️ by Mesh</P>
+      <span class="flex justify-center">
+        <Button
+          icon="pi pi-github"
+          style="color: var(--color-indigo-400)"
+          variant="text"
+          severity="secondary"
+          rounded
+          aria-label="github"
+          @click="navigateToGithub()"
+        />
+      </span>
+    </footer>
   </section>
 </template>
 

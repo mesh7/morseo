@@ -8,7 +8,8 @@ export const useMorseStore = defineStore('morsestore', () => {
 
   // Function to generate 1000 random words
   const pickRandomWord = () => {
-
+    var spaceKeyAudio = new Audio("");
+      spaceKeyAudio.play();
   }
 
   const searchResponse = ref({});

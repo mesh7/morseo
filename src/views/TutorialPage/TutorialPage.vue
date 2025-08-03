@@ -2,35 +2,19 @@
 import { useRouter } from "vue-router";
 import Card from "primevue/card";
 import Button from "primevue/button";
+import WordCard from "../../components/WordCard/WordCard.vue";
 
 const router = useRouter();
 
 const navigateToCodePage = () => {
   router.push({ name: "HomePage" });
 };
-
-const pressedKeys: any = {};
-
-window.addEventListener("keydown", (e) => {
-  // Only record the time if it's the first press (not repeated)
-  if (!pressedKeys[e.code]) {
-    pressedKeys[e.code] = e.timeStamp;
-  }
-});
-
-window.addEventListener("keyup", (e) => {
-  if (pressedKeys[e.code]) {
-    const duration = (e.timeStamp - pressedKeys[e.code]) / 1000; // in seconds
-    console.log(
-      `Key "${e.code}" was pressed for ${duration.toFixed(2)} seconds`
-    );
-    console.log(pressedKeys, "pressedKeys");
-    delete pressedKeys[e.code]; // reset
-  }
-});
 </script>
 
 <template>
+  <!-- Tutorial Page -->
+  <h2>Tutorial Page</h2>
+  <WordCard msg="Vite + Vue" />
   <section
     class="flex flex-col-reverse md:flex-row items-center justify-between px-8 py-20 max-w-7xl mx-auto"
   >
@@ -41,21 +25,16 @@ window.addEventListener("keyup", (e) => {
           ><h1
             class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-indigo-400 md:text-5xl lg:text-6xl dark:text-white"
           >
-            Learn Morse Code
+            Tutorial
           </h1>
           <h6
             class="mb-4 text-2xl font-extrabold text-gray-500 dark:text-white"
           >
-            The Timeless Language of Signals
+            Tutorial
           </h6></template
         >
         <template #content>
-          <p class="mt-6 text-lg text-gray-900 dark:text-white">
-            Welcome to Morseo, your interactive companion for mastering Morse
-            code - the timeless language of signals and sound. Whether you're a
-            curious beginner, a history buff, or a survivalist prepping for
-            off-grid communication, we've got you covered.
-          </p>
+          <p class="mt-6 text-lg text-gray-900 dark:text-white">Tutorial</p>
         </template>
       </Card>
       <div class="space-x-4">
@@ -71,7 +50,7 @@ window.addEventListener("keyup", (e) => {
             rounded
             size="large"
             @click="navigateToCodePage"
-            ><p class="mx-3 font-semibold text-white">Start Challenge</p>
+            ><p class="mx-3 font-semibold text-white">Tutorial</p>
           </Button>
         </div>
       </div>
