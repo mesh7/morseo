@@ -8,6 +8,7 @@ export default defineConfig({
     vue(),
     tailwindcss(),
   ],
+  base: '/morseo/',
   resolve: {
     preserveSymlinks: true
   },

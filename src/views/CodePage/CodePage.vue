@@ -1,17 +1,25 @@
 <script setup lang="ts">
+import { onMounted } from "vue";
 import { useRouter } from "vue-router";
+import { storeToRefs } from "pinia";
 import { useMorseStore } from "../../store/morse-store/morse-store";
+
 import Card from "primevue/card";
 import Button from "primevue/button";
 
 const router = useRouter();
 const morseStore = useMorseStore();
 
+const { morseWord } = storeToRefs(morseStore);
+
 const navigateToCodePage = () => {
   router.push({ name: "HomePage" });
 };
 
-morseStore.pickRandomWord();
+// Fetching the morse word
+onMounted(() => {
+  morseStore.pickRandomWord();
+});
 
 const pressedKeys: any = {};
 
@@ -23,13 +31,15 @@ window.addEventListener("keydown", (e) => {
 });
 
 window.addEventListener("keyup", (e) => {
-  if (pressedKeys[e.code]) { 
+  if (pressedKeys[e.code]) {
     const duration = (e.timeStamp - pressedKeys[e.code]) / 1000; // in seconds
     console.log(
       `Key "${e.code}" was pressed for ${duration.toFixed(2)} seconds`
     );
     console.log(pressedKeys, "pressedKeys");
     delete pressedKeys[e.code]; // reset
+  } else if (e.key === "Enter") {
+    console.log("Enter key pressed anywhere on the document!");
   }
 });
 </script>
@@ -50,20 +60,30 @@ window.addEventListener("keyup", (e) => {
           <h6
             class="mb-4 text-2xl font-extrabold text-gray-500 dark:text-white"
           >
-            The Timeless Language of Signals
+            {{ morseWord }}
           </h6></template
         >
         <template #content>
           <p class="mt-6 text-lg text-gray-900 dark:text-white">
-            Welcome to Morseo, your interactive companion for mastering Morse
-            code - the timeless language of signals and sound. Whether you're a
-            curious beginner, a history buff, or a survivalist prepping for
-            off-grid communication, we've got you covered.
+            Welcome to Morseo
           </p>
         </template>
       </Card>
       <div class="space-x-4">
         <div class="buttons mt-10">
+          <Button
+            class="mr-6"
+            style="
+              background-color: var(--color-indigo-400);
+              border: 2px solid var(--color-indigo-400);
+            "
+            id="start-button"
+            severity="primary"
+            rounded
+            size="large"
+            @click="morseStore.pickRandomWord()"
+            ><p class="mx-3 font-semibold text-white">Generate new word</p>
+          </Button>
           <Button
             class="mr-6"
             style="
