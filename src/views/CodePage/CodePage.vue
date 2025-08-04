@@ -1,13 +1,17 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
+import { useMorseStore } from "../../store/morse-store/morse-store";
 import Card from "primevue/card";
 import Button from "primevue/button";
 
 const router = useRouter();
+const morseStore = useMorseStore();
 
 const navigateToCodePage = () => {
   router.push({ name: "HomePage" });
 };
+
+morseStore.pickRandomWord();
 
 const pressedKeys: any = {};
 
@@ -19,7 +23,7 @@ window.addEventListener("keydown", (e) => {
 });
 
 window.addEventListener("keyup", (e) => {
-  if (pressedKeys[e.code]) {
+  if (pressedKeys[e.code]) { 
     const duration = (e.timeStamp - pressedKeys[e.code]) / 1000; // in seconds
     console.log(
       `Key "${e.code}" was pressed for ${duration.toFixed(2)} seconds`
