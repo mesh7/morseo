@@ -10,7 +10,7 @@ import Button from "primevue/button";
 const router = useRouter();
 const morseStore = useMorseStore();
 
-const { morseWord } = storeToRefs(morseStore);
+const { morseWord, morseWordArray } = storeToRefs(morseStore);
 
 const navigateToCodePage = () => {
   router.push({ name: "HomePage" });
@@ -67,7 +67,11 @@ window.addEventListener("keyup", (e) => {
           <p class="mt-6 text-lg text-gray-900 dark:text-white">
             Welcome to Morseo
           </p>
-          <div class="dummy">
+          <div
+            v-for="(letter, index) in morseWordArray"
+            :key="index"
+            class="dummy"
+          >
             <Button
               class="mr-6"
               style="
@@ -78,8 +82,7 @@ window.addEventListener("keyup", (e) => {
               severity="primary"
               rounded
               size="large"
-              @click="navigateToCodePage"
-              ><p class="mx-3 font-semibold text-white">{{}}</p>
+              ><p class="mx-3 font-semibold text-white">{{ letter }}</p>
             </Button>
           </div>
           <div class="space-x-4">
