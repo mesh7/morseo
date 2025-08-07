@@ -46,10 +46,10 @@ window.addEventListener("keyup", (e) => {
 
 <template>
   <section
-    class="flex flex-col-reverse md:flex-row items-center justify-between px-8 py-20 max-w-7xl mx-auto"
+    class="flex flex-col-reverse md:flex-row items-center justify-center px-8 py-20 max-w-7xl mx-auto"
   >
     <!-- Content -->
-    <div class="text-center md:text-left">
+    <div class="w-4xl">
       <Card>
         <template #title
           ><h1
@@ -57,48 +57,63 @@ window.addEventListener("keyup", (e) => {
           >
             Learn Morse Code
           </h1>
+        </template>
+        <template #content>
           <h6
             class="mb-4 text-2xl font-extrabold text-gray-500 dark:text-white"
           >
             {{ morseWord }}
-          </h6></template
-        >
-        <template #content>
+          </h6>
           <p class="mt-6 text-lg text-gray-900 dark:text-white">
             Welcome to Morseo
           </p>
+          <div class="dummy">
+            <Button
+              class="mr-6"
+              style="
+                background-color: var(--color-indigo-400);
+                border: 2px solid var(--color-indigo-400);
+              "
+              id="start-button"
+              severity="primary"
+              rounded
+              size="large"
+              @click="navigateToCodePage"
+              ><p class="mx-3 font-semibold text-white">{{}}</p>
+            </Button>
+          </div>
+          <div class="space-x-4">
+            <div class="buttons mt-10">
+              <Button
+                class="mr-6"
+                style="
+                  background-color: var(--color-indigo-400);
+                  border: 2px solid var(--color-indigo-400);
+                "
+                id="start-button"
+                severity="primary"
+                rounded
+                size="large"
+                @click="morseStore.pickRandomWord()"
+                ><p class="mx-3 font-semibold text-white">Generate new word</p>
+              </Button>
+              <Button
+                class="mr-6"
+                style="
+                  background-color: var(--color-indigo-400);
+                  border: 2px solid var(--color-indigo-400);
+                "
+                id="start-button"
+                severity="primary"
+                rounded
+                size="large"
+                @click="navigateToCodePage"
+                ><p class="mx-3 font-semibold text-white">Start Challenge</p>
+              </Button>
+            </div>
+          </div>
         </template>
       </Card>
-      <div class="space-x-4">
-        <div class="buttons mt-10">
-          <Button
-            class="mr-6"
-            style="
-              background-color: var(--color-indigo-400);
-              border: 2px solid var(--color-indigo-400);
-            "
-            id="start-button"
-            severity="primary"
-            rounded
-            size="large"
-            @click="morseStore.pickRandomWord()"
-            ><p class="mx-3 font-semibold text-white">Generate new word</p>
-          </Button>
-          <Button
-            class="mr-6"
-            style="
-              background-color: var(--color-indigo-400);
-              border: 2px solid var(--color-indigo-400);
-            "
-            id="start-button"
-            severity="primary"
-            rounded
-            size="large"
-            @click="navigateToCodePage"
-            ><p class="mx-3 font-semibold text-white">Start Challenge</p>
-          </Button>
-        </div>
-      </div>
     </div>
   </section>
 </template>
